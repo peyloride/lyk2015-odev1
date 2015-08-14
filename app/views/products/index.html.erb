@@ -1,0 +1,10 @@
+<h1> Ürün Listesi </h1><h5><%= link_to 'Yeni ürün ekle', new_product_path %></h5>
+<hr>
+<% @products.each do |product| %>
+    <h3>Ürün adı: <%= product.title %></h3><br/>
+    <p>Açıklama:: <%= product.description %></p><br/>
+    <p>Ücret: <%= product.price %></p><br/>
+    <p>Kullanıcı: <%= product.user.username %></p>
+    <%= link_to 'Edit', edit_product_path(product)%>
+    <hr>
+<% end %>

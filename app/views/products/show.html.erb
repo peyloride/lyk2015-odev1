@@ -1,0 +1,5 @@
+<h3>Ürün Adı: <%= @product.title %></h3><br/>
+<p>Açıklama: <%= @product.description %></p><br/>
+<p>Ücret: <%= @product.price %></p><br/>
+<p>Kullanıcı: <%= @product.user.username %></p><br/>
+<%= link_to 'Ürün listesine dön', products_path %>
