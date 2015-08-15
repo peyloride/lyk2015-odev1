@@ -4,6 +4,7 @@
     <h3>Ürün adı: <%= product.title %></h3><br/>
     <p>Açıklama:: <%= product.description %></p><br/>
     <p>Ücret: <%= product.price %></p><br/>
+    <p>KDV Dahil: <%= product.vat_included_price %></p><br/>
     <p>Kullanıcı: <%= product.user.username %></p>
     <%= link_to 'Edit', edit_product_path(product)%>
     <hr>

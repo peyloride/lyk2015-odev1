@@ -1,22 +1,4 @@
 <h2> Yeni Ürün </h2>
 <%= form_for :product, url: products_path do |f| %>
-
-    <% if @product.errors.any? %>
-        <% @product.errors.full_messages.each do |msg| %>
-            <%= msg %><br/>
-        <% end  %>
-    <% end %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <br/>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-    <br/>
-    <%= f.label :price %>
-    <%= f.text_area  :price %>
-    <br/>
-    <%= f.collection_select(:user_id, User.all, :id, :username) %>
-    <br/>
-    <%= f.submit %>
+    <%= render 'form', f:f %>
 <% end %>
