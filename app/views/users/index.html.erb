@@ -5,6 +5,8 @@
     <p>Email: <%= user.email %></p><br/>
     <p>Şehir: <%= user.city %></p><br/>
     <h3>Yaş: <%= user.age %></h3><br/>
+    <h3>Ürünler: <%= user.products.map {|p| p.title}.join(',') %></h3>
+    <%= link_to 'Show', user_path(user) %>
     <%= link_to 'Edit', edit_user_path(user)%>
     <hr>
 <% end %>

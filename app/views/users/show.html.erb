@@ -2,4 +2,5 @@
 <p>Email: <%= @user.email %></p><br/>
 <p>City: <%= @user.city %></p><br/>
 <h3>Yaş: <%= @user.age %></h3><br/>
+<h3>Ürünler: <%= @user.products.map {|p| p.title}.join(',') %></h3>
 <%= link_to 'Kullanıcı listesine dön', users_path %>
