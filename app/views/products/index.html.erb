@@ -7,5 +7,6 @@
     <p>KDV Dahil: <%= product.vat_included_price %></p><br/>
     <p>Kullanıcı: <%= product.user.username %></p>
     <%= link_to 'Edit', edit_product_path(product)%>
+    <%= link_to 'Delete', product_path(product), method: :delete, data: {confirm: "Emin misin bak"} %>
     <hr>
 <% end %>
